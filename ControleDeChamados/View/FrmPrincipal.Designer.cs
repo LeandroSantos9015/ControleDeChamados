@@ -33,9 +33,12 @@
             this.arquivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mudarUsuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.chamadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.feriadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.projetoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tipoDeColaboradorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.chamadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.labelLogin = new System.Windows.Forms.ToolStripStatusLabel();
@@ -60,9 +63,7 @@
             this.btnImprimir1 = new System.Windows.Forms.ToolStripButton();
             this.btnAjuda1 = new System.Windows.Forms.ToolStripButton();
             this.cmbAtivo = new System.Windows.Forms.ToolStripComboBox();
-            this.projetoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tipoDeColaboradorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.feriadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.chamadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -101,12 +102,6 @@
             this.sairToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.sairToolStripMenuItem.Text = "Sair";
             // 
-            // chamadoToolStripMenuItem
-            // 
-            this.chamadoToolStripMenuItem.Name = "chamadoToolStripMenuItem";
-            this.chamadoToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
-            this.chamadoToolStripMenuItem.Text = "Chamado";
-            // 
             // cadastrosToolStripMenuItem
             // 
             this.cadastrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -121,8 +116,34 @@
             // cadaToolStripMenuItem
             // 
             this.cadaToolStripMenuItem.Name = "cadaToolStripMenuItem";
-            this.cadaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cadaToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.cadaToolStripMenuItem.Text = "Colaborador";
+            // 
+            // feriadoToolStripMenuItem
+            // 
+            this.feriadoToolStripMenuItem.Name = "feriadoToolStripMenuItem";
+            this.feriadoToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.feriadoToolStripMenuItem.Text = "Feriado";
+            // 
+            // projetoToolStripMenuItem
+            // 
+            this.projetoToolStripMenuItem.Name = "projetoToolStripMenuItem";
+            this.projetoToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.projetoToolStripMenuItem.Text = "Projeto";
+            // 
+            // tipoDeColaboradorToolStripMenuItem
+            // 
+            this.tipoDeColaboradorToolStripMenuItem.Name = "tipoDeColaboradorToolStripMenuItem";
+            this.tipoDeColaboradorToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.tipoDeColaboradorToolStripMenuItem.Text = "Tipo de Colaborador";
+            // 
+            // chamadoToolStripMenuItem
+            // 
+            this.chamadoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.chamadosToolStripMenuItem});
+            this.chamadoToolStripMenuItem.Name = "chamadoToolStripMenuItem";
+            this.chamadoToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.chamadoToolStripMenuItem.Text = "Chamado";
             // 
             // statusStrip1
             // 
@@ -331,23 +352,11 @@
             this.cmbAtivo.Name = "cmbAtivo";
             this.cmbAtivo.Size = new System.Drawing.Size(121, 25);
             // 
-            // projetoToolStripMenuItem
+            // chamadosToolStripMenuItem
             // 
-            this.projetoToolStripMenuItem.Name = "projetoToolStripMenuItem";
-            this.projetoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.projetoToolStripMenuItem.Text = "Projeto";
-            // 
-            // tipoDeColaboradorToolStripMenuItem
-            // 
-            this.tipoDeColaboradorToolStripMenuItem.Name = "tipoDeColaboradorToolStripMenuItem";
-            this.tipoDeColaboradorToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
-            this.tipoDeColaboradorToolStripMenuItem.Text = "Tipo de Colaborador";
-            // 
-            // feriadoToolStripMenuItem
-            // 
-            this.feriadoToolStripMenuItem.Name = "feriadoToolStripMenuItem";
-            this.feriadoToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
-            this.feriadoToolStripMenuItem.Text = "Feriado";
+            this.chamadosToolStripMenuItem.Name = "chamadosToolStripMenuItem";
+            this.chamadosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.chamadosToolStripMenuItem.Text = "Chamados";
             // 
             // FrmPrincipal
             // 
@@ -411,6 +420,7 @@
         private System.Windows.Forms.ToolStripMenuItem projetoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem feriadoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tipoDeColaboradorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem chamadosToolStripMenuItem;
     }
 }
 

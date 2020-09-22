@@ -1,0 +1,76 @@
+﻿CREATE DATABASE ControleChamados
+
+USE ControleChamados
+
+CREATE TABLE Categoria
+(
+	Id BIGINT PRIMARY KEY IDENTITY(1,1) NOT NULL,
+	Descricao VARCHAR(MAX) NOT NULL
+)
+
+CREATE TABLE Prioridade
+(
+	Id BIGINT PRIMARY KEY IDENTITY(1,1) NOT NULL,
+	Descricao VARCHAR(MAX) NOT NULL
+)
+
+CREATE TABLE Status
+(
+	Id BIGINT PRIMARY KEY IDENTITY(1,1) NOT NULL,
+	Descricao VARCHAR(MAX) NOT NULL
+)
+
+CREATE TABLE Departamento
+(
+	Id BIGINT PRIMARY KEY IDENTITY(1,1) NOT NULL,
+	Descricao VARCHAR(MAX) NOT NULL
+)
+
+CREATE TABLE Usuario
+(
+	Id BIGINT PRIMARY KEY IDENTITY(1,1) NOT NULL,
+	Nome VARCHAR(MAX) NOT NULL,
+	Login VARCHAR(MAX),
+	Senha VARCHAR(MAX),
+	IdDepartamento BIGINT CONSTRAINT FK_IdApartamento_Usuario FOREIGN KEY REFERENCES Departamento(Id),
+	Operador BIT NOT NULL
+)
+
+CREATE TABLE Chamado
+(
+	Id BIGINT PRIMARY KEY IDENTITY(1,1) NOT NULL,
+	IdCategoria BIGINT CONSTRAINT FK_IdCategoria_Chamado FOREIGN KEY REFERENCES Categoria(Id) NOT NULL,
+	IdStatus BIGINT CONSTRAINT FK_IdStatus_Chamado FOREIGN KEY REFERENCES Status(Id) NOT NULL,
+	IdPrioridade BIGINT CONSTRAINT FK_IdPrioridade_Chamado FOREIGN KEY REFERENCES Prioridade(Id) NOT NULL,
+	PrevisaoSolucao DATETIME NOT NULL,
+	DataAbertura DATETIME NOT NULL,
+	IdUsuarioAbertura BIGINT CONSTRAINT FK_IdUsuarioAbertura_Chamado FOREIGN KEY REFERENCES Usuario(Id) NOT NULL,
+	IdUsuarioOperador BIGINT CONSTRAINT FK_IdUsuarioOperador_Chamado FOREIGN KEY REFERENCES Usuario(Id) NOT NULL,
+	IdUsuarioResponsavel BIGINT CONSTRAINT FK_IdUsuarioResponsavel_Chamado FOREIGN KEY REFERENCES Usuario(Id) NOT NULL,
+	Assunto VARCHAR(MAX)
+)
+
+CREATE TABLE Interacoes
+(
+	Id BIGINT PRIMARY KEY IDENTITY(1,1) NOT NULL,
+	IdChamado BIGINT CONSTRAINT FK_IdChamado_Interacoes FOREIGN KEY REFERENCES Chamado(Id) NOT NULL,
+	IdUsuario BIGINT CONSTRAINT FK_IdUsuarioResponsavel_Interacoes FOREIGN KEY REFERENCES Usuario(Id) NOT NULL,
+	DataHora DATETIME NOT NULL,
+	Mensagem VARCHAR(MAX) NOT NULL
+)
+
+
+selects
+
+SELECT * FROM Chamado cham
+INNER JOIN Usuario usuAber
+ON cham.IdUsuarioAbertura = usuAber.Id
+INNER JOIN Usuario usuOper
+ON cham.IdUsuarioOperador = usuOper.Id
+INNER JOIN Usuario usuResp
+ON cham.IdUsuarioResponsavel = usuResp.Id
+--order by inte.DataHora
+
+SELECT * FROM Interacoes inte
+WHERE inte.IdChamado = 2
+order by inte.DataHora, inte.Id

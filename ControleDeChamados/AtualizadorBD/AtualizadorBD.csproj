@@ -85,5 +85,8 @@
     <Folder Include="Modelos\" />
     <Folder Include="Scripts\" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="ScriptInicial.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
