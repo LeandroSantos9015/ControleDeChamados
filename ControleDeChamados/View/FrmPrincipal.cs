@@ -19,5 +19,9 @@ namespace View
         }
 
         public Form PrincipalView => this;
+
+        public ToolStripMenuItem MudarUsuárioToolStripMenuItem => this.mudarUsuárioToolStripMenuItem;
+
+       
     }
 }

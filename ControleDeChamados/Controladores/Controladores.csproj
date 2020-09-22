@@ -11,7 +11,7 @@
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <Deterministic>true</Deterministic>
+    <Deterministic>false</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -50,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CtrlPrincipal.cs" />
+    <Compile Include="Excecoes\CtrlExcecoes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -77,6 +79,10 @@
     <ProjectReference Include="..\Interfaces\Interfaces.csproj">
       <Project>{39b0c481-b513-480b-941f-fcb8956af409}</Project>
       <Name>Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mensagens\Mensagens.csproj">
+      <Project>{4720ec6c-088c-456e-bb8c-be126ba3f4c3}</Project>
+      <Name>Mensagens</Name>
     </ProjectReference>
     <ProjectReference Include="..\Modelos\Modelos.csproj">
       <Project>{0036ea79-a8ff-4091-bdf9-a7d2d66c0aef}</Project>

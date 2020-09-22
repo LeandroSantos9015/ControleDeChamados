@@ -12,6 +12,7 @@ namespace Interfaces
 
         Form PrincipalView { get; }
 
+        ToolStripMenuItem MudarUsuárioToolStripMenuItem { get; }
 
     }
 }

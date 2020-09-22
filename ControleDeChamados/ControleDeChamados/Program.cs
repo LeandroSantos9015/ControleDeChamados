@@ -1,4 +1,5 @@
 ﻿using Controladores;
+using Controladores.Excecoes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,12 +16,17 @@ namespace ControleDeChamados
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-
-            CtrlPrincipal principal = new CtrlPrincipal();
-
-            Application.Run(principal.Principal.PrincipalView);
+            try
+            {
+                CtrlPrincipal ctrl = new CtrlPrincipal();
+                Application.EnableVisualStyles();
+                Application.Run(ctrl.Principal.PrincipalView);
+            }
+            catch (Exception e)
+            {
+                //TODO Ainda falta implementar as caixas de dialogo mais amigáveis e talvez colocar em um outro projeto
+                CtrlExcecoes.Excecao(e, e.Source);
+            }
         }
     }
 }
