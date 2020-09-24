@@ -1,4 +1,5 @@
-﻿using Interfaces;
+﻿using Controladores.Chamados;
+using Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -40,7 +41,13 @@ namespace Controladores
 
         private void DelegarEventos()
         {
-            this.Principal.MudarUsuárioToolStripMenuItem.Click += MudarUsuárioToolStripMenuItem_Click;
+            this.Principal.MudarUsuarioToolStripMenuItem.Click += MudarUsuárioToolStripMenuItem_Click;
+            this.Principal.ChamadosToolStripMenuItem.Click += ChamadoToolStripMenuItem_Click;
+        }
+
+        private void ChamadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new CtrlChamado(Principal);
         }
 
         private void MudarUsuárioToolStripMenuItem_Click(object sender, EventArgs e)

@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.arquivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mudarUsuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mudarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -84,7 +84,7 @@
             // arquivoToolStripMenuItem
             // 
             this.arquivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mudarUsuárioToolStripMenuItem,
+            this.mudarUsuarioToolStripMenuItem,
             this.sairToolStripMenuItem});
             this.arquivoToolStripMenuItem.Name = "arquivoToolStripMenuItem";
             this.arquivoToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
@@ -92,9 +92,9 @@
             // 
             // mudarUsuárioToolStripMenuItem
             // 
-            this.mudarUsuárioToolStripMenuItem.Name = "mudarUsuárioToolStripMenuItem";
-            this.mudarUsuárioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.mudarUsuárioToolStripMenuItem.Text = "Mudar Usuário";
+            this.mudarUsuarioToolStripMenuItem.Name = "mudarUsuárioToolStripMenuItem";
+            this.mudarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.mudarUsuarioToolStripMenuItem.Text = "Mudar Usuário";
             // 
             // sairToolStripMenuItem
             // 
@@ -388,7 +388,7 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem arquivoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem mudarUsuárioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mudarUsuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem chamadoToolStripMenuItem;
         private System.Windows.Forms.StatusStrip statusStrip1;

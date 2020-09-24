@@ -8,10 +8,11 @@
     <OutputType>Library</OutputType>
     <RootNamespace>View</RootNamespace>
     <AssemblyName>View</AssemblyName>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -36,8 +37,15 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.Data.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v13.2.Core, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v13.2.Core, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Printing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -55,6 +63,24 @@
     <Compile Include="Cadastros\FrmCadColaborador.Designer.cs">
       <DependentUpon>FrmCadColaborador.cs</DependentUpon>
     </Compile>
+    <Compile Include="Chamados\FrmChamado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chamados\FrmChamado.Designer.cs">
+      <DependentUpon>FrmChamado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chamados\FrmListaChamados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chamados\FrmListaChamados.Designer.cs">
+      <DependentUpon>FrmListaChamados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chamados\UCInteracoes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Chamados\UCInteracoes.Designer.cs">
+      <DependentUpon>UCInteracoes.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,8 +88,20 @@
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControlPadrao\UCPadrao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlPadrao\UCPadrao.Designer.cs">
+      <DependentUpon>UCPadrao.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Cadastros\FrmCadColaborador.resx">
       <DependentUpon>FrmCadColaborador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chamados\FrmChamado.resx">
+      <DependentUpon>FrmChamado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chamados\UCInteracoes.resx">
+      <DependentUpon>UCInteracoes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
@@ -76,7 +114,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserControlPadrao\UCPadrao.resx">
+      <DependentUpon>UCPadrao.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

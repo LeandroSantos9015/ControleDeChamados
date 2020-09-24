@@ -20,8 +20,10 @@ namespace View
 
         public Form PrincipalView => this;
 
-        public ToolStripMenuItem MudarUsuárioToolStripMenuItem => this.mudarUsuárioToolStripMenuItem;
+        public ToolStripMenuItem MudarUsuarioToolStripMenuItem => this.mudarUsuarioToolStripMenuItem;
 
-       
+        public ToolStripMenuItem ChamadosToolStripMenuItem => this.chamadosToolStripMenuItem;
+
+
     }
 }
