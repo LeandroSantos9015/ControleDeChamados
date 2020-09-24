@@ -12,9 +12,7 @@ namespace Interfaces.UserControls
     {
         UserControl UCInteracaoView { get; }
 
-        Label LblNumero { get; }
-
-        Label LblUsuario { get; }
+        Label Label { get; }
 
         MemoEdit TextDesc { get; }
 

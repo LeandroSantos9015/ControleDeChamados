@@ -48,7 +48,17 @@ namespace Controladores.Chamados
         private void TelaInteracoes()
         {
             CtrlInteracoes interacoes = new CtrlInteracoes(null);
+            //CtrlInteracoes interacoes2 = new CtrlInteracoes(null);
+
             this.ChamadoView.FlwInteracoes.Controls.Add(interacoes.InteracaoView.UCInteracaoView);
+            //this.ChamadoView.FlwInteracoes.Controls.Add(interacoes2.InteracaoView.UCInteracaoView);
+
+            int tamanho = this.ChamadoView.FlwInteracoes.VerticalScroll.Maximum - this.ChamadoView.FlwInteracoes.VerticalScroll.LargeChange;
+            
+            //bug --> tem q setar 2 vezes pra funcionar
+            this.ChamadoView.FlwInteracoes.VerticalScroll.Value = tamanho;
+            this.ChamadoView.FlwInteracoes.VerticalScroll.Value = tamanho;
+
         }
     }
 }

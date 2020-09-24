@@ -20,9 +20,7 @@ namespace View.Chamados
 
         public UserControl UCInteracaoView => this;
 
-        public Label LblNumero => lblInteracao;
-
-        public Label LblUsuario => lblNome;
+        public Label Label => label;
 
         public MemoEdit TextDesc => textEdit1;
 

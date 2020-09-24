@@ -19,7 +19,7 @@ namespace Controladores.Chamados
         {
             this.InteracaoView = new UCInteracoes();
 
-            CarregaInteracoes(null);
+            CarregaInteracoes(null, null, "Leandro", null);
 
             this.DelegarEventos();
 
@@ -28,25 +28,21 @@ namespace Controladores.Chamados
 
         private void DelegarEventos()
         {
-            this.InteracaoView.LblUsuario.Click += LblUsuario_Click;
-
-
-
-
+            this.InteracaoView.Label.Click += LblUsuario_Click;
         }
 
         private void LblUsuario_Click(object sender, EventArgs e)
         {
             //this.InteracaoView.RchDesc.Lines.ToString();
 
-            CarregaInteracoes(this.InteracaoView.TextDesc.Text);
+            CarregaInteracoes(this.InteracaoView.TextDesc.Text, 1, "Leandro Andrade dos Santos", DateTime.Now);
         }
 
-        private void CarregaInteracoes(string texto)
+        private void CarregaInteracoes(string texto, Int64? iteracao, string nomeUsuario, DateTime? dataHora)
         {
             if (texto is null)
                 for (int i = 0; i < 50; i++)
-                    texto += "linha ";
+                    texto += "linha leandro leandro leandro";
 
             this.InteracaoView.TextDesc.Text = texto;
 
@@ -60,9 +56,7 @@ namespace Controladores.Chamados
             cache.Dispose();
             this.InteracaoView.TextDesc.Height = rect.Height;
 
-            this.InteracaoView.LblNumero.Text = "1";
-            this.InteracaoView.LblUsuario.Text = "Leandro Andrade dos Santos";
-
+            this.InteracaoView.Label.Text = iteracao?.ToString() + " - " + nomeUsuario + " - " + dataHora?.ToString("dd/MM/yy HH:mm:ss");
         }
     }
 }
