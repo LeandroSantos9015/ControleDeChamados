@@ -2,6 +2,7 @@
 
 USE ControleChamados
 
+
 CREATE TABLE Categoria
 (
 	Id BIGINT PRIMARY KEY IDENTITY(1,1) NOT NULL,
@@ -26,6 +27,12 @@ CREATE TABLE Departamento
 	Descricao VARCHAR(MAX) NOT NULL
 )
 
+CREATE TABLE Etapa
+(
+	Id BIGINT PRIMARY KEY IDENTITY(1,1) NOT NULL,
+	Descricao VARCHAR(MAX) NOT NULL
+)
+
 CREATE TABLE Usuario
 (
 	Id BIGINT PRIMARY KEY IDENTITY(1,1) NOT NULL,
@@ -39,15 +46,16 @@ CREATE TABLE Usuario
 CREATE TABLE Chamado
 (
 	Id BIGINT PRIMARY KEY IDENTITY(1,1) NOT NULL,
+	Assunto VARCHAR(MAX) NOT NULL,
 	IdCategoria BIGINT CONSTRAINT FK_IdCategoria_Chamado FOREIGN KEY REFERENCES Categoria(Id) NOT NULL,
 	IdStatus BIGINT CONSTRAINT FK_IdStatus_Chamado FOREIGN KEY REFERENCES Status(Id) NOT NULL,
 	IdPrioridade BIGINT CONSTRAINT FK_IdPrioridade_Chamado FOREIGN KEY REFERENCES Prioridade(Id) NOT NULL,
-	PrevisaoSolucao DATETIME NOT NULL,
-	DataAbertura DATETIME NOT NULL,
+	IdEtapa BIGINT CONSTRAINT FK_IdEtapa_Chamado FOREIGN KEY REFERENCES Etapa(Id) NOT NULL,
 	IdUsuarioAbertura BIGINT CONSTRAINT FK_IdUsuarioAbertura_Chamado FOREIGN KEY REFERENCES Usuario(Id) NOT NULL,
 	IdUsuarioOperador BIGINT CONSTRAINT FK_IdUsuarioOperador_Chamado FOREIGN KEY REFERENCES Usuario(Id) NOT NULL,
 	IdUsuarioResponsavel BIGINT CONSTRAINT FK_IdUsuarioResponsavel_Chamado FOREIGN KEY REFERENCES Usuario(Id) NOT NULL,
-	Assunto VARCHAR(MAX)
+	PrevisaoSolucao DATETIME NOT NULL,
+	DataAbertura DATETIME NOT NULL
 )
 
 CREATE TABLE Interacoes
@@ -58,7 +66,6 @@ CREATE TABLE Interacoes
 	DataHora DATETIME NOT NULL,
 	Mensagem VARCHAR(MAX) NOT NULL
 )
-
 
 selects
 
@@ -74,3 +81,19 @@ ON cham.IdUsuarioResponsavel = usuResp.Id
 SELECT * FROM Interacoes inte
 WHERE inte.IdChamado = 2
 order by inte.DataHora, inte.Id
+
+
+procedure
+
+CREATE PROCEDURE SalvarAtualizar_Categoria
+(
+	@Id BIGINT,
+	@Descricao VARCHAR(MAX)
+)
+AS BEGIN
+
+	IF(@Id IS NULL OR @Id = 0)
+		INSERT INTO Categoria SELECT @Descricao
+	ELSE
+		UPDATE Categoria SET Descricao = @Descricao WHERE Id = @Id
+END

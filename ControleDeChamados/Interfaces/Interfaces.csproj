@@ -54,7 +54,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cadastros\IDepartamento.cs" />
+    <Compile Include="Cadastros\ICategoria.cs" />
     <Compile Include="Chamados\IChamado.cs" />
+    <Compile Include="IGenerica.cs" />
     <Compile Include="ITelaPrincipal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserControls\IPadrao.cs" />

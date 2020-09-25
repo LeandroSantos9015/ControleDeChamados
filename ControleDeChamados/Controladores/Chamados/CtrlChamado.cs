@@ -20,20 +20,14 @@ namespace Controladores.Chamados
         public override ModelTelaPadrao ModeloTelaPadrao =>
             new ModelTelaPadrao
             {
-                Painel = this.ChamadoView.FlwPrincipal,
+                Formulario = this.ChamadoView,
                 Descricao = "Descrição do chamado aqui",
                 DescricaoLabel = "Assunto",
                 Id = 9992111
             };
 
-        public CtrlChamado(ITelaPrincipal Pai) : base()
+        public CtrlChamado(ITelaPrincipal Pai) : base(Pai)
         {
-            this.ChamadoView.ChamadosView.StartPosition = FormStartPosition.CenterScreen;
-
-            this.ChamadoView.ChamadosView.MdiParent = Pai.PrincipalView;
-
-            this.ChamadoView.ChamadosView.Show();
-
             this.TelaInteracoes();
 
             this.DelegarEventos();
@@ -47,18 +41,24 @@ namespace Controladores.Chamados
 
         private void TelaInteracoes()
         {
+
             CtrlInteracoes interacoes = new CtrlInteracoes(null);
-            //CtrlInteracoes interacoes2 = new CtrlInteracoes(null);
 
             this.ChamadoView.FlwInteracoes.Controls.Add(interacoes.InteracaoView.UCInteracaoView);
             //this.ChamadoView.FlwInteracoes.Controls.Add(interacoes2.InteracaoView.UCInteracaoView);
 
             int tamanho = this.ChamadoView.FlwInteracoes.VerticalScroll.Maximum - this.ChamadoView.FlwInteracoes.VerticalScroll.LargeChange;
-            
+
             //bug --> tem q setar 2 vezes pra funcionar
             this.ChamadoView.FlwInteracoes.VerticalScroll.Value = tamanho;
             this.ChamadoView.FlwInteracoes.VerticalScroll.Value = tamanho;
 
         }
+
+        public override void BtnNovo_Click(object sender, EventArgs e)
+        {
+            base.HabilitaDesabilitaSequenciaBotoes();
+        }
+
     }
 }

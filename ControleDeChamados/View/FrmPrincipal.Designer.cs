@@ -39,6 +39,7 @@
             this.projetoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tipoDeColaboradorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chamadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.chamadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.labelLogin = new System.Windows.Forms.ToolStripStatusLabel();
@@ -63,7 +64,8 @@
             this.btnImprimir1 = new System.Windows.Forms.ToolStripButton();
             this.btnAjuda1 = new System.Windows.Forms.ToolStripButton();
             this.cmbAtivo = new System.Windows.Forms.ToolStripComboBox();
-            this.chamadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.categoriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.departamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -90,9 +92,9 @@
             this.arquivoToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.arquivoToolStripMenuItem.Text = "Arquivo";
             // 
-            // mudarUsuárioToolStripMenuItem
+            // mudarUsuarioToolStripMenuItem
             // 
-            this.mudarUsuarioToolStripMenuItem.Name = "mudarUsuárioToolStripMenuItem";
+            this.mudarUsuarioToolStripMenuItem.Name = "mudarUsuarioToolStripMenuItem";
             this.mudarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.mudarUsuarioToolStripMenuItem.Text = "Mudar Usuário";
             // 
@@ -105,7 +107,9 @@
             // cadastrosToolStripMenuItem
             // 
             this.cadastrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.categoriaToolStripMenuItem,
             this.cadaToolStripMenuItem,
+            this.departamentoToolStripMenuItem,
             this.feriadoToolStripMenuItem,
             this.projetoToolStripMenuItem,
             this.tipoDeColaboradorToolStripMenuItem});
@@ -144,6 +148,12 @@
             this.chamadoToolStripMenuItem.Name = "chamadoToolStripMenuItem";
             this.chamadoToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.chamadoToolStripMenuItem.Text = "Chamado";
+            // 
+            // chamadosToolStripMenuItem
+            // 
+            this.chamadosToolStripMenuItem.Name = "chamadosToolStripMenuItem";
+            this.chamadosToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.chamadosToolStripMenuItem.Text = "Chamados";
             // 
             // statusStrip1
             // 
@@ -352,11 +362,17 @@
             this.cmbAtivo.Name = "cmbAtivo";
             this.cmbAtivo.Size = new System.Drawing.Size(121, 25);
             // 
-            // chamadosToolStripMenuItem
+            // categoriaToolStripMenuItem
             // 
-            this.chamadosToolStripMenuItem.Name = "chamadosToolStripMenuItem";
-            this.chamadosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.chamadosToolStripMenuItem.Text = "Chamados";
+            this.categoriaToolStripMenuItem.Name = "categoriaToolStripMenuItem";
+            this.categoriaToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.categoriaToolStripMenuItem.Text = "Categoria";
+            // 
+            // departamentoToolStripMenuItem
+            // 
+            this.departamentoToolStripMenuItem.Name = "departamentoToolStripMenuItem";
+            this.departamentoToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.departamentoToolStripMenuItem.Text = "Departamento";
             // 
             // FrmPrincipal
             // 
@@ -421,6 +437,8 @@
         private System.Windows.Forms.ToolStripMenuItem feriadoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tipoDeColaboradorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem chamadosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem categoriaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem departamentoToolStripMenuItem;
     }
 }
 

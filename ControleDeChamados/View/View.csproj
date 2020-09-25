@@ -63,6 +63,18 @@
     <Compile Include="Cadastros\FrmCadColaborador.Designer.cs">
       <DependentUpon>FrmCadColaborador.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cadastros\FrmCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastros\FrmCategoria.Designer.cs">
+      <DependentUpon>FrmCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\FrmDepartamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastros\FrmDepartamento.Designer.cs">
+      <DependentUpon>FrmDepartamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Chamados\FrmChamado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +108,12 @@
     </Compile>
     <EmbeddedResource Include="Cadastros\FrmCadColaborador.resx">
       <DependentUpon>FrmCadColaborador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastros\FrmCategoria.resx">
+      <DependentUpon>FrmCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastros\FrmDepartamento.resx">
+      <DependentUpon>FrmDepartamento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Chamados\FrmChamado.resx">
       <DependentUpon>FrmChamado.cs</DependentUpon>

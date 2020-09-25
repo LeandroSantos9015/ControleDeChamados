@@ -16,10 +16,11 @@ namespace View.Chamados
     {
         public FrmChamado() { InitializeComponent(); }
 
-        public Form ChamadosView => this;
+        public Form Formulario => this;
+
+        public FlowLayoutPanel Painel => this.flwPrincipal;
 
         public FlowLayoutPanel FlwInteracoes => this.flwInteracoes;
 
-        public FlowLayoutPanel FlwPrincipal => this.flwPrincipal;
     }
 }

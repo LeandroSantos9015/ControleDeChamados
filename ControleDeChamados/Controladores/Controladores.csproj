@@ -56,8 +56,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AValidacaoMensagens.cs" />
+    <Compile Include="Cadastros\CtrlDepartamento.cs" />
+    <Compile Include="Cadastros\CtrlCategoria.cs" />
     <Compile Include="Chamados\CtrlChamado.cs" />
     <Compile Include="Chamados\CtrlInteracoes.cs" />
+    <Compile Include="CtrlBotoes.cs" />
     <Compile Include="CtrlPrincipal.cs" />
     <Compile Include="Excecoes\CtrlExcecoes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -85,6 +89,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BancoDeDados\BancoDeDados.csproj">
+      <Project>{54C8152D-3DD8-4EEE-8C46-A729C6BF0ABC}</Project>
+      <Name>BancoDeDados</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Enumeradores\Enumeradores.csproj">
+      <Project>{480435BD-F722-4BA5-81FF-D89B522101FC}</Project>
+      <Name>Enumeradores</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Interfaces\Interfaces.csproj">
       <Project>{39b0c481-b513-480b-941f-fcb8956af409}</Project>
       <Name>Interfaces</Name>
@@ -96,6 +108,10 @@
     <ProjectReference Include="..\Modelos\Modelos.csproj">
       <Project>{0036ea79-a8ff-4091-bdf9-a7d2d66c0aef}</Project>
       <Name>Modelos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UtilitariosSistema\UtilitariosSistema.csproj">
+      <Project>{9c219348-0ed7-4541-b577-73b0305679fc}</Project>
+      <Name>UtilitariosSistema</Name>
     </ProjectReference>
     <ProjectReference Include="..\View\View.csproj">
       <Project>{544034ad-80cf-4117-a8fb-abebeefba9f5}</Project>

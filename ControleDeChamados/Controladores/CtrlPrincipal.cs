@@ -1,4 +1,7 @@
-﻿using Controladores.Chamados;
+﻿using Controladores.Cadastros;
+using Controladores.Chamados;
+using Customizados;
+using Enumeradores;
 using Interfaces;
 using System;
 using System.Collections.Generic;
@@ -22,6 +25,8 @@ namespace Controladores
 
             this.DelegarEventos();
 
+            this.CarregaToolStripComboBox();
+
             // this.TesteExcecao();
         }
 
@@ -39,10 +44,30 @@ namespace Controladores
 
         }
 
+        private void CarregaToolStripComboBox()
+        {
+            this.Principal.CmbAtivo.ComboBox.DataSource = SetDataSource.Carregar(typeof(EAtivo));
+            this.Principal.CmbAtivo.ComboBox.DisplayMember = SetDataSource.Mostrador;
+            this.Principal.CmbAtivo.ComboBox.ValueMember = SetDataSource.Valor;
+        }
+
         private void DelegarEventos()
         {
             this.Principal.MudarUsuarioToolStripMenuItem.Click += MudarUsuárioToolStripMenuItem_Click;
             this.Principal.ChamadosToolStripMenuItem.Click += ChamadoToolStripMenuItem_Click;
+            this.Principal.CategoriaToolStripMenuItem.Click += CategoriaToolStripMenuItem_Click;
+            this.Principal.DepartamentoToolStripMenuItem.Click += DepartamentoToolStripMenuItem_Click;
+            
+        }
+
+        private void DepartamentoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new CtrlDepartamento(Principal);
+        }
+
+        private void CategoriaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new CtrlCategoria(Principal);
         }
 
         private void ChamadoToolStripMenuItem_Click(object sender, EventArgs e)

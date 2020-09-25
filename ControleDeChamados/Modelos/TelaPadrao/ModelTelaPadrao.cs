@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,6 @@ namespace Modelos.TelaPadrao
 
         public String DescricaoLabel { get; set; }
 
-        public FlowLayoutPanel Painel { get; set; }
+        public IGenerica Formulario { get; set; }
     }
 }

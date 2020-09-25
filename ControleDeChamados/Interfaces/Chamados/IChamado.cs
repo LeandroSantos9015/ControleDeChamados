@@ -8,13 +8,8 @@ using System.Windows.Forms;
 
 namespace Interfaces.Chamados
 {
-    public interface IChamado
+    public interface IChamado : IGenerica
     {
-        Form ChamadosView { get; }
-
         FlowLayoutPanel FlwInteracoes { get; }
-
-        FlowLayoutPanel FlwPrincipal { get; }
-
     }
 }
