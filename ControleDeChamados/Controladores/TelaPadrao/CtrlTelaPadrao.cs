@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UtilitariosSistema;
 using View.UserControlPadrao;
 
 namespace Controladores.TelaPadrao
@@ -77,6 +78,17 @@ namespace Controladores.TelaPadrao
         {
             HabilitaDesabilitaBotoesPai(new bool[] { false, false, false, false, false, false, false, false }, this.Pai);
             RetirarEventosPai(this.Pai);
+        }
+
+        protected ModelTelaPadrao TelaParaObjeto()
+        {
+            Int64.TryParse(this.IdDescricaoPadrao.Id.ToString(), out Int64 num);
+
+            return new ModelTelaPadrao
+            {
+                Id = num,
+                Descricao = this.IdDescricaoPadrao.Descricao.Text
+            };
         }
     }
 }

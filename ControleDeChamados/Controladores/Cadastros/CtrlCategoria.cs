@@ -54,18 +54,21 @@ namespace Controladores.Cadastros
 
         public override void BtnSalvar_Click(object sender, EventArgs e)
         {
-            string retornoSalvar = repositorioCategoria.SalvarAtualizar(TelaParaObjeto());
+            string retornoSalvar = repositorioCategoria.SalvarAtualizar(Converte());
             base.HabilitaDesabilitaSequenciaBotoes();
 
             this.SalvoComSucesso(retornoSalvar);
         }
 
-        private ModeloCategoria TelaParaObjeto()
+        private ModeloCategoria Converte()
         {
+            ModelTelaPadrao tela = base.TelaParaObjeto();
+
             return new ModeloCategoria
             {
-                Id = ModeloTelaPadrao.Id,
-                Descricao = ModeloTelaPadrao.Descricao
+                Id = tela.Id,
+                Descricao = tela.Descricao,
+                
             };
         }
     }
