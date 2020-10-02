@@ -33,7 +33,7 @@ namespace UtilitariosSistema
             dataTable.Rows.Add(objeto.ToDataRow(dataTable));
         }
 
-        private static IList<KeyValuePair<String, Type>> ColetaProperties(object obj)
+        public static IList<KeyValuePair<String, Type>> ColetaProperties(object obj)
         {
             IList<KeyValuePair<String, Type>> retorno = new List<KeyValuePair<String, Type>>();
 

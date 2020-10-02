@@ -99,6 +99,12 @@
     <Compile Include="FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pesquisar\BuscaGenerica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pesquisar\BuscaGenerica.Designer.cs">
+      <DependentUpon>BuscaGenerica.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserControlPadrao\UCPadrao.cs">
       <SubType>UserControl</SubType>
@@ -123,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pesquisar\BuscaGenerica.resx">
+      <DependentUpon>BuscaGenerica.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

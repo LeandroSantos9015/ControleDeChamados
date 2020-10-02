@@ -64,6 +64,7 @@
     <Compile Include="CtrlBotoes.cs" />
     <Compile Include="CtrlPrincipal.cs" />
     <Compile Include="Excecoes\CtrlExcecoes.cs" />
+    <Compile Include="Pesquisar\CtrlPesquisar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TelaPadrao\CtrlTelaPadrao.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">

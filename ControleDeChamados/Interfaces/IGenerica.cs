@@ -12,6 +12,5 @@ namespace Interfaces
         Form Formulario { get; }
 
         FlowLayoutPanel Painel { get; }
-
     }
 }

@@ -1,4 +1,5 @@
 ﻿using BancoDeDados.Repositorio.Cadastro;
+using Controladores.Pesquisar;
 using Controladores.TelaPadrao;
 using Interfaces;
 using Interfaces.Cadastros;
@@ -18,18 +19,7 @@ namespace Controladores.Cadastros
     {
         public ICategoria CategoriaView = new FrmCategoria();
 
-
         private RepositorioCategoria repositorioCategoria = new RepositorioCategoria();
-
-
-        public override ModelTelaPadrao ModeloTelaPadrao =>
-           new ModelTelaPadrao
-           {
-               Formulario = CategoriaView,
-               Descricao = "Categoria Aqui",
-               DescricaoLabel = "Descrição",
-               Id = null
-           };
 
         public CtrlCategoria(ITelaPrincipal Pai) : base(Pai)
         {
@@ -41,26 +31,9 @@ namespace Controladores.Cadastros
 
         }
 
-        public override void BtnNovo_Click(object sender, EventArgs e)
-        {
-            base.HabilitaDesabilitaSequenciaBotoes();
-        }
+        #region Métodos overrides
 
-        public override void BtnCancelar_Click(object sender, EventArgs e)
-        {
-            base.HabilitaDesabilitaSequenciaBotoes();
-            //MapeiaObjetoNaTela(null);
-        }
-
-        public override void BtnSalvar_Click(object sender, EventArgs e)
-        {
-            string retornoSalvar = repositorioCategoria.SalvarAtualizar(Converte());
-            base.HabilitaDesabilitaSequenciaBotoes();
-
-            this.SalvoComSucesso(retornoSalvar);
-        }
-
-        private ModeloCategoria Converte()
+        public override object ValoresTelaPadrao()
         {
             ModelTelaPadrao tela = base.TelaParaObjeto();
 
@@ -68,8 +41,84 @@ namespace Controladores.Cadastros
             {
                 Id = tela.Id,
                 Descricao = tela.Descricao,
-                
             };
         }
+
+        public override ModelTelaPadrao ModeloTelaPadrao =>
+           new ModelTelaPadrao
+           {
+               Formulario = CategoriaView,
+               Descricao = null,
+               DescricaoLabel = null,
+               Id = null
+           };
+
+        public override void BtnImprimir_Click(object sender, EventArgs e)
+        {
+            base.HabilitaDesabilitaSequenciaBotoes();
+        }
+
+        public override void BtnExcluir_Click(object sender, EventArgs e)
+        {
+            // SalvarOuAtualizar(MapeiaTelaParaObjeto(false));
+
+            base.HabilitaDesabilitaSequenciaBotoes();
+        }
+
+        public override void BtnSalvar_Click(object sender, EventArgs e)
+        {
+            ModelTelaPadrao obj = this.TelaParaObjeto();
+
+            string retornoSalvar = repositorioCategoria.SalvarAtualizar(new CategoriaDTO { Id = obj.Id, Descricao = obj.Descricao });
+            if (retornoSalvar.Contains("Salva com Sucesso"))
+            {
+                base.HabilitaDesabilitaSequenciaBotoes();
+                SalvoComSucesso(retornoSalvar);
+                base.ObjetoParaTela();
+            }
+            else
+                ErroDesconhecido("Cadastro de Categoria", "Erro ao Tentar Salvar", retornoSalvar);
+        }
+
+        public override void BtnConfirmar_Click(object sender, EventArgs e)
+        {
+            base.HabilitaDesabilitaSequenciaBotoes();
+        }
+
+        public override void BtnPesquisar_Click(object sender, EventArgs e)
+        {
+            RepositorioCategoria repositorioCategoria = new RepositorioCategoria();
+
+            int status = base.HabilitaDesabilitaSequenciaBotoes();
+
+            // sem tratamento para ativo no momento, criar uma sobrecarga depois
+            CtrlPesquisar Pesquisa = new CtrlPesquisar(base.Pai, repositorioCategoria.Listar().Cast<Object>().ToList(), 741, "Pesquisa de Categorias");
+
+            ModeloCategoria cat = Pesquisa.RetornaObjetoSelecionado() as ModeloCategoria;
+
+            base.ObjetoParaTela(new ModelTelaPadrao { Id = cat.Id, Descricao = cat.Descricao });
+        }
+
+        public override void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            base.HabilitaDesabilitaSequenciaBotoes();
+
+            base.ObjetoParaTela(null);
+        }
+
+        public override void BtnNovo_Click(object sender, EventArgs e)
+        {
+            base.HabilitaDesabilitaSequenciaBotoes();
+        }
+
+        public override void BtnAjuda_Click(object sender, EventArgs e)
+        {
+            const string cabecalho = "Cadastro de Categoria";
+            string corpo = @"Responsável pela parte de cadastro de categoria que influencia no Cadastro de Chamado.";
+
+            MessageBox.Show(corpo, cabecalho);
+        }
+
+        #endregion
     }
 }

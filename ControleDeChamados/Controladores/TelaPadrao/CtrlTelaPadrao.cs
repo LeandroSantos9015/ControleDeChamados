@@ -1,5 +1,6 @@
 ﻿using Interfaces;
 using Interfaces.UserControls;
+using Modelos.Cadastro;
 using Modelos.TelaPadrao;
 using System;
 using System.Collections.Generic;
@@ -18,7 +19,13 @@ namespace Controladores.TelaPadrao
 
         public abstract ModelTelaPadrao ModeloTelaPadrao { get; }
 
-        private ITelaPrincipal Pai { get; set; }
+        /// <summary>
+        /// Método que implementa em cada tela seu retorno
+        /// </summary>
+        /// <returns></returns>
+        public abstract object ValoresTelaPadrao();
+
+        protected ITelaPrincipal Pai { get; set; }
 
         public CtrlTelaPadrao(ITelaPrincipal Pai)
         {
@@ -82,13 +89,27 @@ namespace Controladores.TelaPadrao
 
         protected ModelTelaPadrao TelaParaObjeto()
         {
-            Int64.TryParse(this.IdDescricaoPadrao.Id.ToString(), out Int64 num);
+            Int64.TryParse(this.IdDescricaoPadrao.Id.Text.ToString(), out Int64 num);
 
             return new ModelTelaPadrao
             {
                 Id = num,
                 Descricao = this.IdDescricaoPadrao.Descricao.Text
             };
+        }
+
+        protected void ObjetoParaTela(ModelTelaPadrao objeto = null)
+        {
+            if (objeto is null)
+            {
+                this.IdDescricaoPadrao.Descricao.Text = null;
+                this.IdDescricaoPadrao.Id.Text = null;
+            }
+            else
+            {
+                this.IdDescricaoPadrao.Descricao.Text = objeto.Descricao;
+                this.IdDescricaoPadrao.Id.Text = objeto.Id?.ToString();
+            }
         }
     }
 }

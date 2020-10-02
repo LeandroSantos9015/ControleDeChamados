@@ -2,6 +2,7 @@
 using Interfaces;
 using Interfaces.Chamados;
 using Interfaces.UserControls;
+using Modelos.Cadastro;
 using Modelos.TelaPadrao;
 using System;
 using System.Collections.Generic;
@@ -60,5 +61,15 @@ namespace Controladores.Chamados
             base.HabilitaDesabilitaSequenciaBotoes();
         }
 
+        public override object ValoresTelaPadrao()
+        {
+            ModelTelaPadrao tela = base.TelaParaObjeto();
+
+            return new ModeloChamado
+            {
+                Id = tela.Id,
+                Descricao = tela.Descricao,
+            };
+        }
     }
 }

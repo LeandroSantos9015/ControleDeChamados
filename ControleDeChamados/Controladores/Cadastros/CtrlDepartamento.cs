@@ -1,6 +1,7 @@
 ﻿using Controladores.TelaPadrao;
 using Interfaces;
 using Interfaces.Cadastros;
+using Modelos.Cadastro;
 using Modelos.TelaPadrao;
 using System;
 using System.Collections.Generic;
@@ -34,6 +35,17 @@ namespace Controladores.Cadastros
         private void DelegarEventos()
         {
             
+        }
+
+        public override object ValoresTelaPadrao()
+        {
+            ModelTelaPadrao tela = base.TelaParaObjeto();
+
+            return new ModeloDepartamento
+            {
+                Id = tela.Id,
+                Descricao = tela.Descricao,
+            };
         }
     }
 }

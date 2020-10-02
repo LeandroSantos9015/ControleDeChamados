@@ -16,7 +16,7 @@ namespace BancoDeDados.Repositorio.Cadastro
 
         public RepositorioCategoria() { stringConexao = FabricaBancoDadosDapper.StringConexaoGerenciador(); }
 
-        public string SalvarAtualizar(ModeloCategoria modelo)
+        public string SalvarAtualizar(CategoriaDTO modelo)
         {
             try
             {
@@ -27,7 +27,48 @@ namespace BancoDeDados.Repositorio.Cadastro
             }
             catch (Exception e)
             {
-                throw;
+                throw e;
+            }
+        }
+
+        public IList<ModeloCategoria> Listar(Int64? IdParceiro = null)
+        {
+            try
+            {
+                string consulta = $@"SELECT * FROM Consultar_Categoria({IdParceiro?.ToString() ?? "null"})";
+
+                using (SqlConnection sqlConnection = new SqlConnection(this.stringConexao))
+                    return sqlConnection.Query<ModeloCategoria>(consulta).ToList();
+            }
+            catch (Exception e)
+            {
+                if (e.HResult == -2146233079)
+                    return null;
+
+                throw e;
+            }
+        }
+
+        /// <summary>
+        /// Colocar sobrecarga de ativo
+        /// </summary>
+        /// <param name="teste"></param>
+        /// <returns></returns>
+        public IList<ModeloCategoria> Listar(int teste)
+        {
+            try
+            {
+                string consulta = @"SELECT * FROM Consultar_Categoria";
+
+                using (SqlConnection sqlConnection = new SqlConnection(this.stringConexao))
+                    return sqlConnection.Query<ModeloCategoria>(consulta).ToList();
+            }
+            catch (Exception e)
+            {
+                if (e.HResult == -2146233079)
+                    return null;
+
+                throw e;
             }
         }
     }

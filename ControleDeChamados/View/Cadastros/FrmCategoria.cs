@@ -18,5 +18,7 @@ namespace View.Cadastros
         public FlowLayoutPanel Painel => flwPanel;
 
         public Form Formulario => this;
+
+        public string Consulta => throw new NotImplementedException();
     }
 }

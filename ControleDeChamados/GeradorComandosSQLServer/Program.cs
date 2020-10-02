@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GeradorComandosSQLServer.Controlador;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,10 @@ namespace GeradorComandosSQLServer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            Controle ctrl = new Controle();
+            
+            Application.Run(ctrl.GeradorView.Principal);
         }
     }
 }

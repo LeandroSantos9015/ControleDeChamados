@@ -59,6 +59,8 @@
     <Compile Include="Chamados\IChamado.cs" />
     <Compile Include="IGenerica.cs" />
     <Compile Include="ITelaPrincipal.cs" />
+    <Compile Include="PesquisarDTO\IConsultaPesquisar.cs" />
+    <Compile Include="Pesquisar\IPesquisar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserControls\IPadrao.cs" />
     <Compile Include="UserControls\IUCInteracao.cs" />
