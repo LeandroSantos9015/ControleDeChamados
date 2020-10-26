@@ -57,6 +57,10 @@
     <Compile Include="FabricaBancoDadosDapper.cs" />
     <Compile Include="Model\ModelConexaoBanco.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositorio\Cadastro\RepositorioEtapa.cs" />
+    <Compile Include="Repositorio\Cadastro\RepositorioDepartamento.cs" />
+    <Compile Include="Repositorio\Cadastro\RepositorioUsuario.cs" />
+    <Compile Include="Repositorio\Cadastro\RepositorioStatus.cs" />
     <Compile Include="Repositorio\Cadastro\RepositorioPrioridade.cs" />
     <Compile Include="Repositorio\Cadastro\RepositorioCategoria.cs" />
     <Compile Include="Repositorio\Gerador\RepositorioGerador.cs" />

@@ -24,6 +24,8 @@ namespace View
         public ToolStripMenuItem ChamadosToolStripMenuItem => this.chamadosToolStripMenuItem;
         public ToolStripMenuItem CategoriaToolStripMenuItem => this.categoriaToolStripMenuItem;
         public ToolStripMenuItem DepartamentoToolStripMenuItem => this.departamentoToolStripMenuItem;
+        public ToolStripMenuItem StatusToolStripMenuItem => this.statusToolStripMenuItem;
+        public ToolStripMenuItem EtapaToolStripMenuItem => this.etapaToolStripMenuItem;
 
 
         // Menu de Manipulação

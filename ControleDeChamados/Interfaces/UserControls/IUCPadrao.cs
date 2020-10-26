@@ -19,5 +19,6 @@ namespace Interfaces.UserControls
 
         Label DescricaoLabel { get; }
 
+        Label LblAtivo { get; }
     }
 }

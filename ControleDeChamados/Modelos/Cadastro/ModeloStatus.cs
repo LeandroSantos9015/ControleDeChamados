@@ -12,7 +12,7 @@ namespace Modelos.Cadastro
     /// <summary>
     /// Modelo pra tela DTO para banco utilizar o conversor
     /// </summary>
-    public class ModeloDepartamento : IConsultaPesquisar
+    public class ModeloStatus : IConsultaPesquisar
     {
         public Int64? Id { get; set; }
 
@@ -24,7 +24,7 @@ namespace Modelos.Cadastro
 
     }
 
-    public class DepartamentoDTO
+    public class StatusDTO
     {
         public Int64? Id { get; set; }
 
@@ -34,11 +34,11 @@ namespace Modelos.Cadastro
 
     }
 
-    public static class ConverteDepartamento
+    public static class ConverteStatus
     {
-        public static DepartamentoDTO Converte(this ModeloDepartamento m)
+        public static StatusDTO Converte(this ModeloStatus m)
         {
-            return new DepartamentoDTO
+            return new StatusDTO
             {
                 Descricao = m.Descricao,
                 Id = m.Id,

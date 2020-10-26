@@ -63,6 +63,24 @@
     <Compile Include="Cadastros\FrmCadColaborador.Designer.cs">
       <DependentUpon>FrmCadColaborador.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cadastros\FrmPrioridade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastros\FrmPrioridade.Designer.cs">
+      <DependentUpon>FrmPrioridade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\FrmStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastros\FrmStatus.Designer.cs">
+      <DependentUpon>FrmStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\FrmEtapa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastros\FrmEtapa.Designer.cs">
+      <DependentUpon>FrmEtapa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cadastros\FrmCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +132,15 @@
     </Compile>
     <EmbeddedResource Include="Cadastros\FrmCadColaborador.resx">
       <DependentUpon>FrmCadColaborador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastros\FrmPrioridade.resx">
+      <DependentUpon>FrmPrioridade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastros\FrmStatus.resx">
+      <DependentUpon>FrmStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastros\FrmEtapa.resx">
+      <DependentUpon>FrmEtapa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cadastros\FrmCategoria.resx">
       <DependentUpon>FrmCategoria.cs</DependentUpon>

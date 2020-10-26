@@ -12,7 +12,7 @@ namespace Modelos.Cadastro
     /// <summary>
     /// Modelo pra tela DTO para banco utilizar o conversor
     /// </summary>
-    public class ModeloDepartamento : IConsultaPesquisar
+    public class ModeloEtapa : IConsultaPesquisar
     {
         public Int64? Id { get; set; }
 
@@ -24,7 +24,7 @@ namespace Modelos.Cadastro
 
     }
 
-    public class DepartamentoDTO
+    public class EtapaDTO
     {
         public Int64? Id { get; set; }
 
@@ -34,11 +34,11 @@ namespace Modelos.Cadastro
 
     }
 
-    public static class ConverteDepartamento
+    public static class ConverteEtapa
     {
-        public static DepartamentoDTO Converte(this ModeloDepartamento m)
+        public static EtapaDTO Converte(this ModeloEtapa m)
         {
-            return new DepartamentoDTO
+            return new EtapaDTO
             {
                 Descricao = m.Descricao,
                 Id = m.Id,

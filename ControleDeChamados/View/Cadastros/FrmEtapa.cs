@@ -11,12 +11,14 @@ using System.Windows.Forms;
 
 namespace View.Cadastros
 {
-    public partial class FrmCategoria : Form, ICategoria
+    public partial class FrmEtapa : Form, IEtapa
     {
-        public FrmCategoria() { InitializeComponent(); }
+        public FrmEtapa() { InitializeComponent(); }
 
         public FlowLayoutPanel Painel => flwPanel;
 
         public Form Formulario => this;
+
+       
     }
 }

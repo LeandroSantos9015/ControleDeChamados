@@ -18,6 +18,8 @@ namespace Modelos.Cadastro
 
         public String Descricao { get; set; }
 
+        public bool Ativo { get; set; }
+
         public string Consulta => Descricao;
 
     }
@@ -27,6 +29,9 @@ namespace Modelos.Cadastro
         public Int64? Id { get; set; }
 
         public String Descricao { get; set; }
+
+        public bool Ativo { get; set; }
+
     }
 
     public static class ConverteCategoria
@@ -36,7 +41,8 @@ namespace Modelos.Cadastro
             return new CategoriaDTO
             {
                 Descricao = m.Descricao,
-                Id = m.Id
+                Id = m.Id,
+                Ativo = m.Ativo
             };
         }
     }

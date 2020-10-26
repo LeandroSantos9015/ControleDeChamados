@@ -33,6 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.descLabel = new System.Windows.Forms.Label();
             this.grp = new System.Windows.Forms.GroupBox();
+            this.lblAtivo = new System.Windows.Forms.Label();
             this.grp.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,6 +72,7 @@
             // grp
             // 
             this.grp.Controls.Add(this.txtId);
+            this.grp.Controls.Add(this.lblAtivo);
             this.grp.Controls.Add(this.descLabel);
             this.grp.Controls.Add(this.txtDescricao);
             this.grp.Controls.Add(this.label1);
@@ -80,6 +82,19 @@
             this.grp.TabIndex = 2;
             this.grp.TabStop = false;
             this.grp.Text = "Identificação";
+            // 
+            // lblAtivo
+            // 
+            this.lblAtivo.AutoSize = true;
+            this.lblAtivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAtivo.ForeColor = System.Drawing.Color.Green;
+            this.lblAtivo.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblAtivo.Location = new System.Drawing.Point(355, 20);
+            this.lblAtivo.Name = "lblAtivo";
+            this.lblAtivo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblAtivo.Size = new System.Drawing.Size(43, 16);
+            this.lblAtivo.TabIndex = 1;
+            this.lblAtivo.Text = "Ativo";
             // 
             // UCPadrao
             // 
@@ -101,5 +116,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label descLabel;
         private System.Windows.Forms.GroupBox grp;
+        private System.Windows.Forms.Label lblAtivo;
     }
 }

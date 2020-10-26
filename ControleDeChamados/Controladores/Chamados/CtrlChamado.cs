@@ -1,4 +1,5 @@
-﻿using Controladores.TelaPadrao;
+﻿using BancoDeDados.Repositorio.Cadastro;
+using Controladores.TelaPadrao;
 using Interfaces;
 using Interfaces.Chamados;
 using Interfaces.UserControls;
@@ -18,6 +19,12 @@ namespace Controladores.Chamados
     {
         public IChamado ChamadoView = new FrmChamado();
 
+        private RepositorioCategoria repCat = new RepositorioCategoria();
+        private RepositorioDepartamento repDept = new RepositorioDepartamento();
+        private RepositorioEtapa repEtapa = new RepositorioEtapa();
+        private RepositorioPrioridade repPrio = new RepositorioPrioridade();
+        private RepositorioStatus repStatus = new RepositorioStatus();
+
         public override ModelTelaPadrao ModeloTelaPadrao =>
             new ModelTelaPadrao
             {
@@ -32,6 +39,8 @@ namespace Controladores.Chamados
             this.TelaInteracoes();
 
             this.DelegarEventos();
+
+            this.CarregarCombos();
 
         }
 
@@ -70,6 +79,29 @@ namespace Controladores.Chamados
                 Id = tela.Id,
                 Descricao = tela.Descricao,
             };
+        }
+
+        private void CarregarCombos()
+        {
+            this.ChamadoView.CbmCategoria.DataSource = repCat.Listar();
+            this.ChamadoView.CbmCategoria.DisplayMember = "Descricao";
+            this.ChamadoView.CbmCategoria.ValueMember = "Id";
+
+            this.ChamadoView.CbmEtapa.DataSource = repEtapa.Listar();
+            this.ChamadoView.CbmEtapa.DisplayMember = "Descricao";
+            this.ChamadoView.CbmEtapa.ValueMember = "Id";
+
+            //this.ChamadoView.CbmOperador.DataSource = null;
+            //this.ChamadoView.CbmCategoria.DisplayMember = "Descricao";
+            //this.ChamadoView.CbmCategoria.ValueMember = "Id";
+
+            this.ChamadoView.CbmPrioridade.DataSource = repPrio.Listar();
+            this.ChamadoView.CbmPrioridade.DisplayMember = "Descricao";
+            this.ChamadoView.CbmPrioridade.ValueMember = "Id";
+
+            this.ChamadoView.CbmStatus.DataSource = repStatus.Listar();
+            this.ChamadoView.CbmStatus.DisplayMember = "Descricao";
+            this.ChamadoView.CbmStatus.ValueMember = "Id";
         }
     }
 }

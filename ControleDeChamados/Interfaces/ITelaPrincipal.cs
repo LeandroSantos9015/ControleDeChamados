@@ -17,6 +17,8 @@ namespace Interfaces
         ToolStripMenuItem ChamadosToolStripMenuItem { get; }
         ToolStripMenuItem CategoriaToolStripMenuItem { get; }
         ToolStripMenuItem DepartamentoToolStripMenuItem { get; }
+        ToolStripMenuItem StatusToolStripMenuItem { get; }
+        ToolStripMenuItem EtapaToolStripMenuItem { get; }
 
 
         // Botões Operações

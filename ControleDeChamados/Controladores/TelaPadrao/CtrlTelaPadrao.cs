@@ -4,6 +4,7 @@ using Modelos.Cadastro;
 using Modelos.TelaPadrao;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -98,18 +99,27 @@ namespace Controladores.TelaPadrao
             };
         }
 
-        protected void ObjetoParaTela(ModelTelaPadrao objeto = null)
+        protected void ObjetoParaTela(bool ativo, ModelTelaPadrao objeto = null)
         {
             if (objeto is null)
             {
                 this.IdDescricaoPadrao.Descricao.Text = null;
                 this.IdDescricaoPadrao.Id.Text = null;
+                this.IdDescricaoPadrao.LblAtivo.Text = "Ativo";
+                this.IdDescricaoPadrao.LblAtivo.ForeColor = Color.Green;
             }
             else
             {
                 this.IdDescricaoPadrao.Descricao.Text = objeto.Descricao;
                 this.IdDescricaoPadrao.Id.Text = objeto.Id?.ToString();
+                this.IdDescricaoPadrao.LblAtivo.Text = ativo ? "Ativo" : "Inativo";
+                this.IdDescricaoPadrao.LblAtivo.ForeColor = ativo ? Color.Green : Color.Red;
             }
+        }
+
+        public void SequenciaBotoesEstadoOriginal()
+        {
+            HabilitaDesabilitaBotoesPai(ultimoEventoBotoes = new bool[] { true, false, true, false, false, false, false, true, true }, PrincipalView);
         }
     }
 }

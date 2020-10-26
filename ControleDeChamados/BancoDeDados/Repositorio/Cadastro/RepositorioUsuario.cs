@@ -10,20 +10,20 @@ using System.Data;
 
 namespace BancoDeDados.Repositorio.Cadastro
 {
-    public class RepositorioPrioridade
+    public class RepositorioUsuario
     {
         private string stringConexao;
 
-        public RepositorioPrioridade() { stringConexao = FabricaBancoDadosDapper.StringConexaoGerenciador(); }
+        public RepositorioUsuario() { stringConexao = FabricaBancoDadosDapper.StringConexaoGerenciador(); }
 
-        public string SalvarAtualizar(PrioridadeDTO modelo)
+        public string SalvarAtualizar(ModeloStatus modelo)
         {
             try
             {
                 using (var sqlConnection = new SqlConnection(this.stringConexao))
-                    sqlConnection.Execute("SalvarAtualizar_Prioridade", modelo, commandType: CommandType.StoredProcedure, commandTimeout: 0);
+                    sqlConnection.Execute("SalvarAtualizar_Status", modelo, commandType: CommandType.StoredProcedure, commandTimeout: 0);
 
-                return "Prioridade Salva com Sucesso!";
+                return "Status Salvo com Sucesso!";
             }
             catch (Exception e)
             {
@@ -31,14 +31,14 @@ namespace BancoDeDados.Repositorio.Cadastro
             }
         }
 
-        public IList<ModeloPrioridade> Listar(Int64? IdParceiro = null)
+        public IList<ModeloStatus> Listar(Int64? IdParceiro = null)
         {
             try
             {
-                string consulta = $@"SELECT * FROM Consultar_Prioridade({IdParceiro?.ToString() ?? "null"})";
+                string consulta = $@"SELECT * FROM Consultar_Status({IdParceiro?.ToString() ?? "null"})";
 
                 using (SqlConnection sqlConnection = new SqlConnection(this.stringConexao))
-                    return sqlConnection.Query<ModeloPrioridade>(consulta).ToList();
+                    return sqlConnection.Query<ModeloStatus>(consulta).ToList();
             }
             catch (Exception e)
             {

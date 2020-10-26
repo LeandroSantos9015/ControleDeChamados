@@ -24,5 +24,8 @@ namespace View.UserControlPadrao
         public GroupBox Grupo => this.grp;
 
         public Label DescricaoLabel => this.descLabel;
+
+        public Label LblAtivo => lblAtivo;
+
     }
 }

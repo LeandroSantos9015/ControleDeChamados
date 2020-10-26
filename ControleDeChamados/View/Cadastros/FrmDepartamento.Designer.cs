@@ -45,7 +45,7 @@
             this.ClientSize = new System.Drawing.Size(416, 77);
             this.Controls.Add(this.flwPanel);
             this.Name = "FrmDepartamento";
-            this.Text = "FrmDepartamento";
+            this.Text = "Cadastro de Departamento";
             this.ResumeLayout(false);
 
         }

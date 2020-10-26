@@ -57,7 +57,19 @@ namespace Controladores
             this.Principal.ChamadosToolStripMenuItem.Click += ChamadoToolStripMenuItem_Click;
             this.Principal.CategoriaToolStripMenuItem.Click += CategoriaToolStripMenuItem_Click;
             this.Principal.DepartamentoToolStripMenuItem.Click += DepartamentoToolStripMenuItem_Click;
-            
+            this.Principal.StatusToolStripMenuItem.Click += StatusToolStripMenuItem_Click;
+            this.Principal.EtapaToolStripMenuItem.Click += EtapaToolStripMenuItem_Click;
+
+        }
+
+        private void StatusToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new CtrlStatus(Principal);
+        }
+
+        private void EtapaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new CtrlEtapa(Principal);
         }
 
         private void DepartamentoToolStripMenuItem_Click(object sender, EventArgs e)

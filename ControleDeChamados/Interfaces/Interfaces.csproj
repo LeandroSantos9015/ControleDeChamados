@@ -54,6 +54,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cadastros\IPrioridade.cs" />
+    <Compile Include="Cadastros\IStatus.cs" />
+    <Compile Include="Cadastros\IEtapa.cs" />
     <Compile Include="Cadastros\IDepartamento.cs" />
     <Compile Include="Cadastros\ICategoria.cs" />
     <Compile Include="Chamados\IChamado.cs" />

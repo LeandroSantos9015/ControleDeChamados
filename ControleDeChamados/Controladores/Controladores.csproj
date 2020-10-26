@@ -57,6 +57,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AValidacaoMensagens.cs" />
+    <Compile Include="Cadastros\CtrlPrioridade.cs" />
+    <Compile Include="Cadastros\CtrlEtapa.cs" />
+    <Compile Include="Cadastros\CtrlStatus.cs" />
     <Compile Include="Cadastros\CtrlDepartamento.cs" />
     <Compile Include="Cadastros\CtrlCategoria.cs" />
     <Compile Include="Chamados\CtrlChamado.cs" />

@@ -1,6 +1,6 @@
 ﻿namespace View.Cadastros
 {
-    partial class FrmCategoria
+    partial class FrmStatus
     {
         /// <summary>
         /// Required designer variable.

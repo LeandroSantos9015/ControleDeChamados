@@ -38,20 +38,20 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.txtAbertoPor = new System.Windows.Forms.TextBox();
+            this.cbmOperador = new System.Windows.Forms.ComboBox();
+            this.cbmEtapa = new System.Windows.Forms.ComboBox();
+            this.cbmStatus = new System.Windows.Forms.ComboBox();
+            this.cbmCategoria = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.cbmPrioridade = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dteSolucao = new System.Windows.Forms.DateTimePicker();
+            this.dteAbertura = new System.Windows.Forms.DateTimePicker();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnInteragir = new System.Windows.Forms.Button();
+            this.btnAtender = new System.Windows.Forms.Button();
             this.grp1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -146,58 +146,58 @@
             this.label7.TabIndex = 2;
             this.label7.Text = "Operador:";
             // 
-            // textBox1
+            // txtAbertoPor
             // 
-            this.textBox1.Location = new System.Drawing.Point(71, 13);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(458, 20);
-            this.textBox1.TabIndex = 3;
+            this.txtAbertoPor.Location = new System.Drawing.Point(71, 13);
+            this.txtAbertoPor.Name = "txtAbertoPor";
+            this.txtAbertoPor.Size = new System.Drawing.Size(458, 20);
+            this.txtAbertoPor.TabIndex = 3;
             // 
-            // comboBox1
+            // cbmOperador
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(71, 39);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(277, 21);
-            this.comboBox1.TabIndex = 4;
+            this.cbmOperador.FormattingEnabled = true;
+            this.cbmOperador.Location = new System.Drawing.Point(71, 39);
+            this.cbmOperador.Name = "cbmOperador";
+            this.cbmOperador.Size = new System.Drawing.Size(277, 21);
+            this.cbmOperador.TabIndex = 4;
             // 
-            // comboBox2
+            // cbmEtapa
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(71, 66);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(106, 21);
-            this.comboBox2.TabIndex = 4;
+            this.cbmEtapa.FormattingEnabled = true;
+            this.cbmEtapa.Location = new System.Drawing.Point(71, 66);
+            this.cbmEtapa.Name = "cbmEtapa";
+            this.cbmEtapa.Size = new System.Drawing.Size(106, 21);
+            this.cbmEtapa.TabIndex = 4;
             // 
-            // comboBox3
+            // cbmStatus
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(242, 66);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(106, 21);
-            this.comboBox3.TabIndex = 4;
+            this.cbmStatus.FormattingEnabled = true;
+            this.cbmStatus.Location = new System.Drawing.Point(242, 66);
+            this.cbmStatus.Name = "cbmStatus";
+            this.cbmStatus.Size = new System.Drawing.Size(106, 21);
+            this.cbmStatus.TabIndex = 4;
             // 
-            // comboBox4
+            // cbmCategoria
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(423, 66);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(106, 21);
-            this.comboBox4.TabIndex = 4;
+            this.cbmCategoria.FormattingEnabled = true;
+            this.cbmCategoria.Location = new System.Drawing.Point(423, 66);
+            this.cbmCategoria.Name = "cbmCategoria";
+            this.cbmCategoria.Size = new System.Drawing.Size(106, 21);
+            this.cbmCategoria.TabIndex = 4;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox5);
-            this.groupBox1.Controls.Add(this.comboBox4);
+            this.groupBox1.Controls.Add(this.cbmPrioridade);
+            this.groupBox1.Controls.Add(this.cbmCategoria);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.comboBox3);
+            this.groupBox1.Controls.Add(this.cbmStatus);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.cbmEtapa);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.cbmOperador);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtAbertoPor);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Location = new System.Drawing.Point(12, 83);
             this.groupBox1.Name = "groupBox1";
@@ -206,63 +206,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Informações";
             // 
-            // groupBox2
+            // cbmPrioridade
             // 
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.dateTimePicker2);
-            this.groupBox2.Controls.Add(this.dateTimePicker1);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Location = new System.Drawing.Point(12, 188);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(135, 113);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Entrega";
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(11, 84);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(105, 20);
-            this.dateTimePicker2.TabIndex = 3;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(11, 36);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(105, 20);
-            this.dateTimePicker1.TabIndex = 3;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.button2);
-            this.groupBox3.Controls.Add(this.button1);
-            this.groupBox3.Location = new System.Drawing.Point(12, 307);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(135, 83);
-            this.groupBox3.TabIndex = 0;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Estágios";
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(9, 50);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(120, 23);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Interagir";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(9, 19);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Atender";
-            this.button1.UseVisualStyleBackColor = true;
+            this.cbmPrioridade.FormattingEnabled = true;
+            this.cbmPrioridade.Location = new System.Drawing.Point(423, 39);
+            this.cbmPrioridade.Name = "cbmPrioridade";
+            this.cbmPrioridade.Size = new System.Drawing.Size(106, 21);
+            this.cbmPrioridade.TabIndex = 4;
             // 
             // label8
             // 
@@ -273,13 +223,63 @@
             this.label8.TabIndex = 2;
             this.label8.Text = "Prioridade:";
             // 
-            // comboBox5
+            // groupBox2
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(423, 39);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(106, 21);
-            this.comboBox5.TabIndex = 4;
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.dteSolucao);
+            this.groupBox2.Controls.Add(this.dteAbertura);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Location = new System.Drawing.Point(12, 188);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(135, 113);
+            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Entrega";
+            // 
+            // dteSolucao
+            // 
+            this.dteSolucao.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dteSolucao.Location = new System.Drawing.Point(11, 84);
+            this.dteSolucao.Name = "dteSolucao";
+            this.dteSolucao.Size = new System.Drawing.Size(105, 20);
+            this.dteSolucao.TabIndex = 3;
+            // 
+            // dteAbertura
+            // 
+            this.dteAbertura.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dteAbertura.Location = new System.Drawing.Point(11, 36);
+            this.dteAbertura.Name = "dteAbertura";
+            this.dteAbertura.Size = new System.Drawing.Size(105, 20);
+            this.dteAbertura.TabIndex = 3;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.btnInteragir);
+            this.groupBox3.Controls.Add(this.btnAtender);
+            this.groupBox3.Location = new System.Drawing.Point(12, 307);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(135, 83);
+            this.groupBox3.TabIndex = 0;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Estágios";
+            // 
+            // btnInteragir
+            // 
+            this.btnInteragir.Location = new System.Drawing.Point(9, 50);
+            this.btnInteragir.Name = "btnInteragir";
+            this.btnInteragir.Size = new System.Drawing.Size(120, 23);
+            this.btnInteragir.TabIndex = 0;
+            this.btnInteragir.Text = "Interagir";
+            this.btnInteragir.UseVisualStyleBackColor = true;
+            // 
+            // btnAtender
+            // 
+            this.btnAtender.Location = new System.Drawing.Point(9, 19);
+            this.btnAtender.Name = "btnAtender";
+            this.btnAtender.Size = new System.Drawing.Size(120, 23);
+            this.btnAtender.TabIndex = 0;
+            this.btnAtender.Text = "Atender";
+            this.btnAtender.UseVisualStyleBackColor = true;
             // 
             // FrmChamado
             // 
@@ -314,20 +314,20 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.TextBox txtAbertoPor;
+        private System.Windows.Forms.ComboBox cbmOperador;
+        private System.Windows.Forms.ComboBox cbmEtapa;
+        private System.Windows.Forms.ComboBox cbmStatus;
+        private System.Windows.Forms.ComboBox cbmCategoria;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dteSolucao;
+        private System.Windows.Forms.DateTimePicker dteAbertura;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnInteragir;
+        private System.Windows.Forms.Button btnAtender;
         private System.Windows.Forms.FlowLayoutPanel flwInteracoes;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox cbmPrioridade;
         private System.Windows.Forms.Label label8;
     }
 }

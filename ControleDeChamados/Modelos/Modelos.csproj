@@ -56,6 +56,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cadastro\ModeloStatus.cs" />
+    <Compile Include="Cadastro\ModeloPrioridade.cs" />
+    <Compile Include="Cadastro\ModeloEtapa.cs" />
     <Compile Include="Cadastro\ModeloCategoria.cs" />
     <Compile Include="Cadastro\ModeloDepartamento.cs" />
     <Compile Include="Cadastro\ModeloChamado.cs" />

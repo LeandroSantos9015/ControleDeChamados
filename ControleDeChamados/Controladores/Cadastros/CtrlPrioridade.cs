@@ -15,13 +15,13 @@ using View.Cadastros;
 
 namespace Controladores.Cadastros
 {
-    public class CtrlCategoria : CtrlTelaPadrao
+    public class CtrlPrioridade : CtrlTelaPadrao
     {
-        public ICategoria CategoriaView = new FrmCategoria();
+        public IPrioridade PrioridadeView = new FrmPrioridade();
 
-        private RepositorioCategoria repositorioCategoria = new RepositorioCategoria();
+        private RepositorioPrioridade repositorioPrioridade = new RepositorioPrioridade();
 
-        public CtrlCategoria(ITelaPrincipal Pai) : base(Pai)
+        public CtrlPrioridade(ITelaPrincipal Pai) : base(Pai)
         {
             this.DelegarEventos();
         }
@@ -37,7 +37,7 @@ namespace Controladores.Cadastros
         {
             ModelTelaPadrao tela = base.TelaParaObjeto();
 
-            return new ModeloCategoria
+            return new ModeloPrioridade
             {
                 Id = tela.Id,
                 Descricao = tela.Descricao,
@@ -47,7 +47,7 @@ namespace Controladores.Cadastros
         public override ModelTelaPadrao ModeloTelaPadrao =>
            new ModelTelaPadrao
            {
-               Formulario = CategoriaView,
+               Formulario = PrioridadeView,
                Descricao = null,
                DescricaoLabel = null,
                Id = null
@@ -62,7 +62,7 @@ namespace Controladores.Cadastros
         {
             ModelTelaPadrao obj = this.TelaParaObjeto();
 
-            string retornoSalvar = repositorioCategoria.SalvarAtualizar(new CategoriaDTO { Id = obj.Id, Descricao = obj.Descricao, Ativo = false });
+            string retornoSalvar = repositorioPrioridade.SalvarAtualizar(new PrioridadeDTO { Id = obj.Id, Descricao = obj.Descricao, Ativo = false });
             if (retornoSalvar.Contains("Salva com Sucesso"))
             {
                 base.HabilitaDesabilitaSequenciaBotoes();
@@ -70,14 +70,14 @@ namespace Controladores.Cadastros
                 base.ObjetoParaTela(true);
             }
             else
-                ErroDesconhecido("Cadastro de Categoria", "Erro ao Tentar Salvar", retornoSalvar);
+                ErroDesconhecido("Cadastro de Prioridade", "Erro ao Tentar Salvar", retornoSalvar);
         }
 
         public override void BtnSalvar_Click(object sender, EventArgs e)
         {
             ModelTelaPadrao obj = this.TelaParaObjeto();
 
-            string retornoSalvar = repositorioCategoria.SalvarAtualizar(new CategoriaDTO { Id = obj.Id, Descricao = obj.Descricao, Ativo = true });
+            string retornoSalvar = repositorioPrioridade.SalvarAtualizar(new PrioridadeDTO { Id = obj.Id, Descricao = obj.Descricao, Ativo = true });
             if (retornoSalvar.Contains("Salva com Sucesso"))
             {
                 base.HabilitaDesabilitaSequenciaBotoes();
@@ -85,7 +85,7 @@ namespace Controladores.Cadastros
                 base.ObjetoParaTela(true);
             }
             else
-                ErroDesconhecido("Cadastro de Categoria", "Erro ao Tentar Salvar", retornoSalvar);
+                ErroDesconhecido("Cadastro de Prioridade", "Erro ao Tentar Salvar", retornoSalvar);
         }
 
         public override void BtnConfirmar_Click(object sender, EventArgs e)
@@ -95,14 +95,14 @@ namespace Controladores.Cadastros
 
         public override void BtnPesquisar_Click(object sender, EventArgs e)
         {
-            RepositorioCategoria repositorioCategoria = new RepositorioCategoria();
+            RepositorioPrioridade repositorioPrioridade = new RepositorioPrioridade();
 
             int status = base.HabilitaDesabilitaSequenciaBotoes();
 
             // sem tratamento para ativo no momento, criar uma sobrecarga depois
-            CtrlPesquisar Pesquisa = new CtrlPesquisar(base.Pai, repositorioCategoria.Listar().Cast<Object>().ToList(), 330, "Pesquisa de Categorias");
+            CtrlPesquisar Pesquisa = new CtrlPesquisar(base.Pai, repositorioPrioridade.Listar().Cast<Object>().ToList(), 330, "Pesquisa de Prioridades");
 
-            ModeloCategoria cat = Pesquisa.RetornaObjetoSelecionado() as ModeloCategoria;
+            ModeloPrioridade cat = Pesquisa.RetornaObjetoSelecionado() as ModeloPrioridade;
 
             if (cat is null)
             {
@@ -127,8 +127,8 @@ namespace Controladores.Cadastros
 
         public override void BtnAjuda_Click(object sender, EventArgs e)
         {
-            const string cabecalho = "Cadastro de Categoria";
-            string corpo = @"Responsável pela parte de cadastro de categoria que influencia no Cadastro de Chamado.";
+            const string cabecalho = "Cadastro de Prioridade";
+            string corpo = @"Responsável pela parte de cadastro de Prioridade que influencia no Cadastro de Chamado.";
 
             MessageBox.Show(corpo, cabecalho);
         }

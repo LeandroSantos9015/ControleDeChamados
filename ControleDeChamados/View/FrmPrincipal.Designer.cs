@@ -34,7 +34,9 @@
             this.mudarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.categoriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.departamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.feriadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.projetoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tipoDeColaboradorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -64,8 +66,8 @@
             this.btnImprimir1 = new System.Windows.Forms.ToolStripButton();
             this.btnAjuda1 = new System.Windows.Forms.ToolStripButton();
             this.cmbAtivo = new System.Windows.Forms.ToolStripComboBox();
-            this.categoriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.departamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.statusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.etapaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -110,18 +112,32 @@
             this.categoriaToolStripMenuItem,
             this.cadaToolStripMenuItem,
             this.departamentoToolStripMenuItem,
+            this.etapaToolStripMenuItem,
             this.feriadoToolStripMenuItem,
             this.projetoToolStripMenuItem,
+            this.statusToolStripMenuItem,
             this.tipoDeColaboradorToolStripMenuItem});
             this.cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
             this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.cadastrosToolStripMenuItem.Text = "Cadastros";
+            // 
+            // categoriaToolStripMenuItem
+            // 
+            this.categoriaToolStripMenuItem.Name = "categoriaToolStripMenuItem";
+            this.categoriaToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.categoriaToolStripMenuItem.Text = "Categoria";
             // 
             // cadaToolStripMenuItem
             // 
             this.cadaToolStripMenuItem.Name = "cadaToolStripMenuItem";
             this.cadaToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.cadaToolStripMenuItem.Text = "Colaborador";
+            // 
+            // departamentoToolStripMenuItem
+            // 
+            this.departamentoToolStripMenuItem.Name = "departamentoToolStripMenuItem";
+            this.departamentoToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.departamentoToolStripMenuItem.Text = "Departamento";
             // 
             // feriadoToolStripMenuItem
             // 
@@ -362,17 +378,17 @@
             this.cmbAtivo.Name = "cmbAtivo";
             this.cmbAtivo.Size = new System.Drawing.Size(121, 25);
             // 
-            // categoriaToolStripMenuItem
+            // statusToolStripMenuItem
             // 
-            this.categoriaToolStripMenuItem.Name = "categoriaToolStripMenuItem";
-            this.categoriaToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
-            this.categoriaToolStripMenuItem.Text = "Categoria";
+            this.statusToolStripMenuItem.Name = "statusToolStripMenuItem";
+            this.statusToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.statusToolStripMenuItem.Text = "Status";
             // 
-            // departamentoToolStripMenuItem
+            // etapaToolStripMenuItem
             // 
-            this.departamentoToolStripMenuItem.Name = "departamentoToolStripMenuItem";
-            this.departamentoToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
-            this.departamentoToolStripMenuItem.Text = "Departamento";
+            this.etapaToolStripMenuItem.Name = "etapaToolStripMenuItem";
+            this.etapaToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.etapaToolStripMenuItem.Text = "Etapa";
             // 
             // FrmPrincipal
             // 
@@ -439,6 +455,8 @@
         private System.Windows.Forms.ToolStripMenuItem chamadosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem categoriaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem departamentoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem etapaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem statusToolStripMenuItem;
     }
 }
 
